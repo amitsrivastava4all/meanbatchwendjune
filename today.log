@@ -1,0 +1,229 @@
+a = 100;
+100
+a = 100
+100
+function addToCart(){
+cart = 0;
+cart++;
+console.log("Cart is ",cart);
+}
+undefined
+addToCart();
+VM235:4 Cart is  1
+undefined
+cart
+1
+cart = "Mobile";
+"Mobile"
+addToCart();
+VM235:4 Cart is  1
+undefined
+cart;
+1
+function order(){
+var q = 10;
+console.log("Quantity is ",q);
+}
+undefined
+order();
+VM377:3 Quantity is  10
+undefined
+q;
+VM398:1 Uncaught ReferenceError: q is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM398:1
+function login(){
+// var t
+console.log("t is ",t);
+if(10>2){
+var t = 100;
+console.log("Inside if ",t);
+// t = 100;
+}
+console.log("Outside if ",t);
+}
+undefined
+login();
+VM574:3 t is  undefined
+VM574:6 Inside if  100
+VM574:9 Outside if  100
+undefined
+function login2(){
+// var t
+console.log("t is ",t);
+if(10>2){
+let t = 100; //Es6
+console.log("Inside if ",t);
+// t = 100;
+}
+console.log("Outside if ",t);
+}
+undefined
+login2();
+VM633:3 Uncaught ReferenceError: t is not defined
+    at login2 (<anonymous>:3:21)
+    at <anonymous>:1:1
+login2 @ VM633:3
+(anonymous) @ VM647:1
+function login2(){
+
+if(10>2){
+let t = 100; //Es6
+console.log("Inside if ",t);
+// t = 100;
+}
+console.log("Outside if ",t);
+}
+undefined
+login2();
+VM658:5 Inside if  100
+VM658:8 Uncaught ReferenceError: t is not defined
+    at login2 (<anonymous>:8:27)
+    at <anonymous>:1:1
+login2 @ VM658:8
+(anonymous) @ VM677:1
+function login2(){
+
+if(10>2){
+let t = 100; //Es6
+console.log("Inside if ",t);
+
+}
+//console.log("Outside if ",t);
+}
+undefined
+login2();
+VM683:5 Inside if  100
+undefined
+var a1 ;
+undefined
+typeof a1;
+"undefined"
+a1= 100;
+100
+typeof a1;
+"number"
+a1= 100.20;
+100.2
+typeof a1;
+"number"
+a1 =1
+1
+typeof a1;
+"number"
+a1=1000000000;
+1000000000
+typeof a1;
+"number"
+var x =10;
+undefined
+var y = 20;
+undefined
+x + y
+30
+x * y;
+200
+y = "20"
+"20"
+typeof y;
+"string"
+x;
+10
+typeof x;
+"number"
+x  + y
+"1020"
+"Your Order No is "+x
+"Your Order No is 10"
+var firstName = "Amit";
+undefined
+var lastName = "Srivastava";
+undefined
+firstName + " "+lastName;
+"Amit Srivastava"
+console.log("Order No is "+x);
+VM1083:1 Order No is 10
+undefined
+var arr = [10,20,30,40,50];
+undefined
+console.log("Arr is "+arr)
+VM1151:1 Arr is 10,20,30,40,50
+undefined
+console.log("Arr is "+arr.toString())
+VM1176:1 Arr is 10,20,30,40,50
+undefined
+typeof arr;
+"object"
+var obj = {x:10,y:20};
+undefined
+console.log("Obj "+obj)
+VM1277:1 Obj [object Object]
+undefined
+console.log("Obj "+obj.toString())
+VM1313:1 Obj [object Object]
+undefined
+console.log("Obj is ",obj);
+VM1362:1 Obj is  {x: 10, y: 20}
+undefined
+obj;
+{x: 10, y: 20}
+obj + 100
+"[object Object]100"
+obj.toString()
+"[object Object]"
+obj.toString() + 100
+"[object Object]100"
+var t = [10,20,30];
+undefined
+var t1 = [90,100];
+undefined
+t + t1;
+"10,20,3090,100"
+t.toString()  + t1.toString();
+"10,20,3090,100"
+x = 100;
+100
+y = 200;
+200
+x - y;
+-100
+x =100;
+100
+y = "200";
+"200"
+x  - y;
+-100
+firstName;
+"Amit"
+lastName
+"Srivastava"
+firstName + lastName
+"AmitSrivastava"
+firstName - lastName;
+NaN
+10+10+"20"
+"2020"
+10+10-"20"
+0
+10+10-"one"
+NaN
+"20"+10+10
+"201010"
+var d = "amit"*20;
+undefined
+d;
+NaN
+typeof d;
+"number"
+isNaN(d);
+true
+isNaN(d)?0:d;
+0
+d = 100000/0;
+Infinity
+d;
+Infinity
+typeof d;
+"number"
+isFinite(d)?d:0;
+0

@@ -1,0 +1,422 @@
+var z;
+undefined
+typeof z;
+"undefined"
+z = 100;
+100
+typeof z;
+"number"
+z = "Amit";
+"Amit"
+typeof z;
+"string"
+z = true;
+true
+typeof z;
+"boolean"
+z = 1000;
+1000
+typeof z;
+"number"
+z = 1;
+1
+typeof z;
+"number"
+z = 100.20;
+100.2
+typeof z;
+"number"
+z = 100/0;
+Infinity
+z;
+Infinity
+typeof z;
+"number"
+var x = "One";
+undefined
+z = 100;
+100
+z + x;
+"100One"
+x + z;
+"One100"
+var a = 1000;
+undefined
+z
+100
+x
+"One"
+a + z + x;
+"1100One"
+a
+1000
+x
+"One"
+a - x
+NaN
+y = "200";
+"200"
+a
+1000
+a - y;
+800
+a+ y;
+"1000200"
+a-y;
+800
+a*y;
+200000
+a+y;
+"1000200"
+a + parseInt(y);
+1200
+e = a - z;
+900
+e = a - x;
+NaN
+x;
+"One"
+a
+1000
+e;
+NaN
+typeof e;
+"number"
+x;
+"One"
+y;
+"200"
+var q =parseInt(y)
+undefined
+q;
+200
+y;
+"200"
+y =parseInt(y)
+200
+typeof y;
+"number"
+e;
+NaN
+isNaN(e);
+true
+isNaN(e)?0:e;
+0
+e= 100/0;
+Infinity
+e;
+Infinity
+typeof e;
+"number"
+isFinite(e);
+false
+isFinite(e)?e:0;
+0
+x = "100";
+"100"
+y = "100.20";
+"100.20"
+Number(x);
+100
+Number(y);
+100.2
+typeof Number;
+"function"
+typeof isNaN;
+"function"
+function test()
+{
+console.log("I am Test ");
+}
+undefined
+window;
+
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+typeof window;
+"object"
+window instanceof Window;
+true
+typeof Window;
+"function"
+test();
+VM955:3 I am Test 
+undefined
+window.test();
+VM955:3 I am Test 
+undefined
+w= "100";
+"100"
+parseInt(w);
+100
+window.parseInt(w);
+100
+var e= new Number(100);
+undefined
+var e1 = 1000;
+undefined
+e1;
+1000
+e;
+Number {100}
+typeof e;
+"object"
+typeof e1;
+"number"
+e1;
+1000
+e;
+Number {100}
+e++
+100
+e;
+101
+typeof e;
+"number"
+var t = "Hello";
+undefined
+typeof t;
+"string"
+var t1 = new String("Hello");
+undefined
+typeof t1;
+"object"
+t1 = "Hello";
+"Hello"
+t1.length;
+5
+t1.toUpperCase();
+"HELLO"
+typeof t1;
+"string"
+var name = "Amit";
+undefined
+name = 'Amit';
+"Amit"
+name = "Let's Do It ";
+"Let's Do It "
+name = `gjdsklghdfgkj
+gjdhfkjghdk
+ghgkfjdh
+gdhjfjk`;
+"gjdsklghdfgkj
+gjdhfkjghdk
+ghgkfjdh
+gdhjfjk"
+name;
+"gjdsklghdfgkj
+gjdhfkjghdk
+ghgkfjdh
+gdhjfjk"
+x = 100;
+100
+y = 200;
+200
+"X is "+x+" and Y is "+y; // String Interpolation
+"X is 100 and Y is 200"
+`X is ${x} and Y is ${y}`;
+"X is 100 and Y is 200"
+`X is ${x} and Y is ${y}`; // String Interpolation Es6
+"X is 100 and Y is 200"
+name = "Amit Srivastava";
+"Amit Srivastava"
+name.startsWith("Amit");
+true
+name.endsWith("va");
+true
+name.includes("mit");
+true
+var address = "A-10, Shakti Nagar, Delhi-7";
+undefined
+var arr = address.split(",");
+undefined
+arr;
+(3) ["A-10", " Shakti Nagar", " Delhi-7"]
+arr[0];
+"A-10"
+arr[1];
+" Shakti Nagar"
+arr[2];
+" Delhi-7"
+var msg = "The ICC Cricket World Cup is the international championship of One Day International (ODI) cricket.";
+undefined
+msg.split(" ").length;
+15
+var t= true;
+undefined
+true + true ;
+2
+var a= 100;
+undefined
+var b = "100";
+undefined
+a==b;
+true
+a===b;
+false
+function add(){
+console.log("I am Add ");
+}
+undefined
+add();
+VM2152:2 I am Add 
+undefined
+add(10,20);
+VM2152:2 I am Add 
+undefined
+add("10",20,true,30, "Amit");
+VM2152:2 I am Add 
+undefined
+function add(x,y){
+return x + y;
+}
+undefined
+add(10,20);
+30
+add();
+NaN
+undefined + undefined;
+NaN
+add(10,"10");
+"1010"
+add(10);
+NaN
+10 + undefined;
+NaN
+function add(x,y){
+if(typeof x ==='undefined'){
+x = 0;
+}
+if(typeof y ==='undefined'){
+y = 0;
+}
+return x + y;
+}
+undefined
+add();
+0
+add(isNaN,isNaN);
+"function isNaN() { [native code] }function isNaN() { [native code] }"
+add(NaN,NaN);
+NaN
+add("","");
+""
+var obj = new Number(1000);
+undefined
+obj = null;
+null
+null + null;
+0
+null + undefined;
+NaN
+var obj = new Number(100);
+undefined
+var obj2 = new Number(200);
+undefined
+obj = obj2;
+Number {200}
+void show(){
+//var ee;
+console.log(ee);
+if(10>2){
+//ee = new Number(100);
+var ee = new Number(100);
+}
+console.log(ee);
+}
+VM2864:1 Uncaught SyntaxError: Unexpected token {
+function show(){
+//var ee;
+console.log(ee);
+if(10>2){
+//ee = new Number(100);
+var ee = new Number(100);
+}
+console.log(ee);
+}
+undefined
+show();
+VM2875:3 undefined
+VM2875:8 Number {100}
+undefined
+function show(){
+
+console.log(ee);
+if(10>2){
+
+let ee = new Number(100);
+console.log("Inside If ",ee);
+}
+console.log(ee);
+}
+undefined
+show();
+VM2956:3 Uncaught ReferenceError: ee is not defined
+    at show (<anonymous>:3:13)
+    at <anonymous>:1:1
+show @ VM2956:3
+(anonymous) @ VM2968:1
+function show(){
+
+//console.log(ee);
+if(10>2){
+
+let ee = new Number(100);
+console.log("Inside If ",ee);
+}
+//console.log(ee);
+}
+undefined
+show();
+VM2975:7 Inside If  Number {100}
+undefined
+var a ;
+undefined
+a?a:0;
+100
+a;
+100
+a=undefined;
+undefined
+a?a:0;
+0
+a=NaN;
+NaN
+a?a:0;
+0
+a=null;
+null
+a?a:0;
+0
+a="";
+""
+a?a:0;
+0
+a=1000;
+1000
+a?a:0;
+1000
+function add(x,y){
+x = x || 0;
+y = y || 0;
+return x + y;
+}
+undefined
+add();
+0
+add(null,null);
+0
+add(undefined,null);
+0
+add(NaN,undefined);
+0
+add(10,undefined);
+10
+function add(x=0,y=0){
+
+return x + y;
+}
+undefined
+add();
+0
+add(10);
+10

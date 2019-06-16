@@ -1,0 +1,184 @@
+var arr = [10,20,30,"Hello",true,[90,100]];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+var arr2 = [[10,20,30],[90,100,120]]
+undefined
+var arr3 = [[[1,2],[90,100]]];
+undefined
+var arr4 = [[[[10,20,30],[90,1000,2000,999,444]],1,2],77,66];
+undefined
+arr4[0];
+(3) [Array(2), 1, 2]
+arr4[1];
+77
+arr4[0][0][0][0];
+10
+var arr = [10,20,30];
+undefined
+for(let i = 0 ; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM554:2 10
+VM554:2 20
+VM554:2 30
+undefined
+var arr2 = [[10,20,30],[1000,2000,3000,5000]];
+undefined
+for(let i = 0; i<arr2.length; i++){
+for(let j =0 ; j<arr2[i].length; j++){
+console.log(arr2[i][j]);
+}
+}
+VM757:3 10
+VM757:3 20
+VM757:3 30
+VM757:3 1000
+VM757:3 2000
+VM757:3 3000
+VM757:3 5000
+undefined
+arr;
+(3) [10, 20, 30]
+for(let a of arr){
+console.log(a);
+}
+VM815:2 10
+VM815:2 20
+VM815:2 30
+undefined
+arr2;
+(2) [Array(3), Array(4)]
+for(let a of arr2){
+console.log(a);
+}
+VM871:2 (3) [10, 20, 30]
+VM871:2 (4) [1000, 2000, 3000, 5000]
+undefined
+for(let a of arr2){
+for(let b of a){
+console.log(b);
+}
+}
+VM918:3 10
+VM918:3 20
+VM918:3 30
+VM918:3 1000
+VM918:3 2000
+VM918:3 3000
+VM918:3 5000
+undefined
+arr.push(100);
+4
+arr;
+(4) [10, 20, 30, 100]
+arr.pop();
+100
+arr;
+(3) [10, 20, 30]
+arr.splice(1);
+(2) [20, 30]
+arr;
+[10]
+arr = [10,20,30,40,50];
+(5) [10, 20, 30, 40, 50]
+arr.splice(0);
+(5) [10, 20, 30, 40, 50]
+arr;
+[]
+arr = [10,20,30,40,50];
+(5) [10, 20, 30, 40, 50]
+arr.length=0;
+0
+arr;
+[]
+arr = [10,20,30,40,50];
+(5) [10, 20, 30, 40, 50]
+arr = [];
+[]
+var arr = [1,2,3,4,5];
+undefined
+var arr2 = [10,20,30,40,5];
+undefined
+var arr3 = [arr,arr2];
+undefined
+arr3;
+(2) [Array(5), Array(5)]
+arr[0] =90;
+90
+arr;
+(5) [90, 2, 3, 4, 5]
+arr3;
+(2) [Array(5), Array(5)]0: (5) [90, 2, 3, 4, 5]1: (5) [10, 20, 30, 40, 5]length: 2__proto__: Array(0)
+var arr3 = [...arr,...arr2];
+undefined
+arr3;
+(10) [90, 2, 3, 4, 5, 10, 20, 30, 40, 5]
+arr;
+(5) [90, 2, 3, 4, 5]
+arr3[0] =111111;
+111111
+arr3;
+(10) [111111, 2, 3, 4, 5, 10, 20, 30, 40, 5]
+arr;
+(5) [90, 2, 3, 4, 5]
+arr instanceof Array;
+true
+var e = new Array(10,20,30,40,50);
+undefined
+e;
+(5) [10, 20, 30, 40, 50]
+typeof e;
+"object"
+e instanceof Array;
+true
+e instanceof Object;
+true
+window;
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+window instanceof Window;
+true
+window instanceof Object;
+true
+var obj = {}; // Custom Object (Object Literal)
+undefined
+typeof obj;
+"object"
+obj instanceof Object;
+true
+typeof Object;
+"function"
+var ram = {id:1001, name:'Ram',salary:9999};
+undefined
+ram ;
+{id: 1001, name: "Ram", salary: 9999}
+ram.id;
+1001
+ram.bonus = 888;
+888
+ram;
+{id: 1001, name: "Ram", salary: 9999, bonus: 888}
+delete ram.id;
+true
+ram;
+{name: "Ram", salary: 9999, bonus: 888}
+var phones= [3333,5555,6666,8888,1111,7777,5432,7776];
+undefined
+phones[0];
+3333
+var phones = {"ram":3333,"shyam":5555};
+undefined
+phones['ram'];
+3333
+phones.ram;
+3333
+var obj = {110085:[1,2,3,4],110007:[10,20,30]}
+undefined
+obj.110085;
+VM2185:1 Uncaught SyntaxError: Unexpected number
+obj[110085];
+(4) [1, 2, 3, 4]

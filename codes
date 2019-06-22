@@ -1,0 +1,462 @@
+var arr = [10,20,30];
+undefined
+arr.push(100);
+4
+arr;
+(4) [10, 20, 30, 100]
+arr.pop();
+100
+arr.splice(1,1);
+[20]
+arr;
+(2) [10, 30]
+var arr = [9999,2222,4444,5555,6666];
+undefined
+var obj = {"ram":9999,"shyam":4444};
+undefined
+obj["ram"];
+9999
+obj.ram;
+9999
+var obj = {1:9000,2:7777};
+undefined
+obj.1;
+VM539:1 Uncaught SyntaxError: Unexpected number
+obj[1];
+9000
+function show(){
+// var b;
+console.log("B is Declare ",b);
+var a = 100;
+if(a==100){
+var b = 200;  // b = 200;
+}
+b++;
+console.log("NOw B is ",b);
+}
+undefined
+show();
+VM770:3 B is Declare  undefined
+VM770:9 NOw B is  201
+undefined
+function show(){
+// var b;
+console.log("B is Declare ",b);
+var a = 100;
+if(a==100){
+var b = 200;  // b = 200;
+let c = 1000;
+}
+b++;
+c++;
+console.log("NOw B is ",b);
+}
+undefined
+show();
+VM819:3 B is Declare  undefined
+VM819:10 Uncaught ReferenceError: c is not defined
+    at show (<anonymous>:10:1)
+    at <anonymous>:1:1
+show @ VM819:10
+(anonymous) @ VM839:1
+function show(){
+// var b;
+console.log("B is Declare ",b);
+var a = 100;
+if(a==100){
+var b = 200;  // b = 200;
+let c = 1000;
+console.log("C is ",c);
+}
+b++;
+//c++;
+console.log("NOw B is ",b);
+}
+undefined
+show();
+VM883:3 B is Declare  undefined
+VM883:8 C is  1000
+VM883:12 NOw B is  201
+undefined
+function show(){
+// var b;
+console.log("B is Declare ",b);
+var a = 100;
+if(a==100){
+var b = 200;  // b = 200;
+let c = 1000;
+console.log("C is ",c);
+}
+b++;
+//c++;
+console.log("NOw B is ",b);
+}
+undefined
+function show(){
+console.log(" I am Show ");
+}
+undefined
+show();
+VM998:2  I am Show 
+undefined
+function show(){
+console.log(" I am Show ");
+return 1000;
+}
+undefined
+show();
+VM1042:2  I am Show 
+1000
+show(10,20);
+VM1042:2  I am Show 
+1000
+show("Amit",10);
+VM1042:2  I am Show 
+1000
+show([100,200],"Amit",10, true);
+VM1042:2  I am Show 
+1000
+function show(){
+console.log(" I am Show ");
+return 1000;
+}
+undefined
+console.dir(show);
+VM1282:1 ƒ show()arguments: nullcaller: nulllength: 0name: "show"prototype: {constructor: ƒ}__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM1237:1[[Scopes]]: Scopes[1]
+undefined
+function show(){
+console.log(" I am Show ",arguments.length);
+return 1000;
+}
+undefined
+show();
+VM1336:2  I am Show  0
+1000
+show(10,20);
+VM1336:2  I am Show  2
+1000
+function jQuery(){
+console.log("I am JQuery");
+}
+undefined
+jQuery();
+VM1495:2 I am JQuery
+undefined
+var $ = jQuery;
+undefined
+jQuery;
+ƒ jQuery(){
+console.log("I am JQuery");
+}
+$
+ƒ jQuery(){
+console.log("I am JQuery");
+}
+$();
+VM1495:2 I am JQuery
+undefined
+$('#abcd');
+VM1495:2 I am JQuery
+undefined
+$(function(){});
+VM1495:2 I am JQuery
+undefined
+function add(){
+console.log("Args ",arguments.length);
+}
+undefined
+add();
+VM1766:2 Args  0
+undefined
+add(10,20);
+VM1766:2 Args  2
+undefined
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=arguments[i];
+}
+return sum;
+}
+undefined
+add();
+0
+add(10);
+10
+add(10,20);
+30
+add(10,20,30,40,50);
+150
+add(10,20,"30",40,50);
+"30304050"
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,20,"30",40,50);
+150
+parseInt("ten");
+NaN
+30 + NaN;
+NaN
+add(10,20,"ten",40,50);
+NaN
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,20,"ten",40,50);
+120
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+function one(){
+return 1000;
+}
+undefined
+add(10,20,"ten",one(),50);
+1080
+add(10,20,"ten",one,50);
+80
+one;
+ƒ one(){
+return 1000;
+}
+parseInt(one);
+NaN
+typeof one;
+"function"
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,20,"ten",one,50);
+1080
+function two(){
+return "2000";
+}
+undefined
+function three(){
+return "ten";
+}
+undefined
+add(10,"20",one,two,three);
+
+3030
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(!arguments[i]){
+arguments[i]=0;
+}
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(undefined,undefined,NaN,"",10);
+10
+var arr = [10,20,30];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(!arguments[i]){
+arguments[i]=0;
+}
+if(arguments[i] instanceof Array){
+for(let j = 0; j<arguments[i].length; j++){
+if(typeof arguments[i]=="function"){
+	arguments[i][j] = arguments[i][j]();
+}
+sum+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+}
+}
+else{
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+}
+return sum;
+}
+undefined
+add([10,20,30],1,"2");
+63
+add([10,20,30],1,"2",one);
+1063
+add([10,20,30],1,"2",one,[one,two,three]);
+1063
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(!arguments[i]){
+arguments[i]=0;
+}
+if(arguments[i] instanceof Array){
+for(let j = 0; j<arguments[i].length; j++){
+if(typeof arguments[i][j]=="function"){
+	arguments[i][j] = arguments[i][j]();
+}
+sum+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+}
+}
+else{
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+}
+return sum;
+}
+undefined
+add([10,20,30],1,"2",one,[one,two,three]);
+4063
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(!arguments[i]){
+arguments[i]=0;
+}
+if(arguments[i] instanceof Array){
+for(let j = 0; j<arguments[i].length; j++){
+if(typeof arguments[i][j]=="function"){
+	arguments[i][j] = arguments[i][j]();
+}
+sum+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+}
+}
+else{
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+}
+return sum;
+}
+undefined
+add(isNaN,isNaN);
+0
+add("","");
+0
+function add(){
+//console.log("Args ",arguments.length);
+var sum = 0;
+for(let i = 0; i<arguments.length; i++){
+if(!arguments[i]){
+arguments[i]=0;
+}
+if(arguments[i] instanceof Array){
+for(let j = 0; j<arguments[i].length; j++){
+if(typeof arguments[i][j]=="function"){
+	arguments[i][j] = arguments[i][j]();
+}
+sum+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+}
+}
+else{
+if(typeof arguments[i]=="function"){
+	arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+}
+return sum;
+}
+undefined
+test();
+function test(){
+console.log(" i am Test ");
+}
+VM3778:3  i am Test 
+undefined
+var x = 100;
+undefined
+var y = function(){
+console.log("I am Function Expression");
+}
+undefined
+typeof y;
+"function"
+y();
+VM3901:2 I am Function Expression
+undefined
+z();
+var z = function(){
+console.log("I am Function Expression");
+}
+
+VM3969:1 Uncaught TypeError: z is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM3969:1
+function calc(){
+var add=function(x,y){
+return x + y;
+}
+var sub = function(){
+return x - y;
+}
+return [add,sub];
+}
+undefined
+var m = calc();
+undefined
+m;
+(2) [ƒ, ƒ]
+m[0](100,200);
+300
+function calc(){
+var add=function(x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x - y;
+}
+return [add,sub];
+}
+undefined
+var m = calc();
+undefined
+m[1](100,200);
+-100
+calc()[0](10,20);
+30

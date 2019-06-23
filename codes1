@@ -1,0 +1,442 @@
+function calc(){
+var add=function(x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x - y;
+}
+return [add,sub];
+}
+undefined
+calc();
+(2) [ƒ, ƒ]
+window.calc();
+(2) [ƒ, ƒ]
+window;
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+typeof window;
+"object"
+this;
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+window == this;
+true
+add;
+VM311:1 Uncaught ReferenceError: add is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM311:1
+var customer=0;
+function add(){
+customer++;
+}
+undefined
+customer;
+0
+add();
+undefined
+customer;
+1
+add();
+undefined
+customer;
+2
+customer = "Amit";
+"Amit"
+add();
+undefined
+customer;
+NaN
+window.customer;
+NaN
+function customerOperations(){
+var customerCount = 0;
+var add = function(){
+customerCount++;
+}
+var remove = function(){
+customerCount--;
+}
+return [add, remove];
+}
+undefined
+var arr = customerOperations();
+undefined
+arr;
+(2) [ƒ, ƒ]0: ƒ ()1: ƒ ()length: 2__proto__: Array(0)
+function customerOperations(){
+var customerCount = 0;
+var add = function(){
+customerCount++;
+return customerCount;
+}
+var remove = function(){
+customerCount--;
+return customerCount;
+
+}
+return [add, remove];
+}
+undefined
+var arr = customerOperations();
+undefined
+arr[0]();
+1
+arr[0]();
+2
+arr[0]();
+3
+arr[0]();
+4
+customerOperations();
+function customerOperations(){
+var customerCount = 0;
+var add = function(){
+customerCount++;
+return customerCount;
+}
+var reset =function(){
+customerCount=0;
+}
+var remove = function(){
+customerCount--;
+return customerCount;
+
+}
+return [add, remove,reset];
+}
+(3) [ƒ, ƒ, ƒ]
+var arr = customerOperations();
+undefined
+arr[0]();
+1
+arr[0]();
+2
+arr[0]();
+3
+arr[0]();
+4
+arr[1]();
+3
+arr[2]();
+undefined
+arr[0]();
+1
+customerOperations();
+(3) [ƒ, ƒ, ƒ]
+var t = (function(){
+var customerCount = 0;
+var add = function(){
+customerCount++;
+return customerCount;
+}
+
+var remove = function(){
+customerCount--;
+return customerCount;
+
+}
+return [add, remove];
+})();
+undefined
+t;
+(2) [ƒ, ƒ]
+t[0]();
+1
+t[0]();
+2
+t[0]();
+3
+var t = (function(){
+var customerCount = 0;
+var add = function(){
+customerCount++;
+return customerCount;
+}
+
+var remove = function(){
+customerCount--;
+return customerCount;
+
+}
+return [add, remove];
+})();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ ()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1371:3[[Scopes]]: Scopes[2]1: ƒ ()length: 2__proto__: Array(0)
+var t = (function(){
+var customerCount = 0;
+var add = function add(){
+customerCount++;
+return customerCount;
+}
+
+var remove = function remove(){
+customerCount--;
+return customerCount;
+
+}
+return [add, remove];
+})();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ add()1: ƒ remove()length: 2__proto__: Array(0)
+t[0]();
+1
+var t = (function(){
+var customerCount = 0;
+var add = function (){
+customerCount++;
+return customerCount;
+}
+
+var remove = function (){
+customerCount--;
+return customerCount;
+
+}
+return {"addcustomer":add, remove};
+})();
+undefined
+t;
+{addcustomer: ƒ, remove: ƒ}
+t.addcustomer();
+1
+t.remove();
+0
+function countDown(){
+var count = 0;
+count++;
+}
+undefined
+countDown();
+undefined
+function countDown(){
+var count = 0;
+count++;
+return count;
+}
+undefined
+countDown();
+1
+countDown();
+1
+countDown();
+1
+function start(){
+var count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+return countDown;
+}
+undefined
+var e = start();
+undefined
+e();
+1
+e();
+2
+e();
+3
+e();
+4
+count;
+VM1875:1 Uncaught ReferenceError: count is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1875:1
+var e = start();
+undefined
+e();
+1
+var e = (function (){
+var count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+return countDown;
+})();
+undefined
+e();
+1
+e();
+2
+e();
+3
+e();
+4
+e();
+5
+function* otp(){
+yield 1900;
+yield 2000;
+yield 8888;
+yield 3333;
+yield 2121;
+
+}
+undefined
+var x = otp();
+undefined
+x;
+otp {<suspended>}__proto__: Generator[[GeneratorLocation]]: VM2147:1[[GeneratorStatus]]: "suspended"[[GeneratorFunction]]: ƒ* otp()[[GeneratorReceiver]]: Window[[Scopes]]: Scopes[2]
+typeof x;
+"object"
+x.next();
+{value: 1900, done: false}
+x.next();
+{value: 2000, done: false}
+x.next();
+{value: 8888, done: false}
+x.next();
+{value: 3333, done: false}
+x.next();
+{value: 2121, done: false}
+x.next();
+{value: undefined, done: true}
+function* autoGen(){
+var count = 0;
+while(true){
+count++;
+yield count;
+}
+}
+undefined
+var t = autoGen();
+undefined
+t.next();
+{value: 1, done: false}
+t.next();
+{value: 2, done: false}
+t.next();
+{value: 3, done: false}
+t.next();
+{value: 4, done: false}
+t.next();
+{value: 5, done: false}
+t.next();
+{value: 6, done: false}
+t.next();
+{value: 7, done: false}
+t.next();
+{value: 8, done: false}
+t.next().value;
+9
+t.next().value;
+10
+t.next().value;
+11
+t.next().value;
+12
+t.next().value;
+13
+var add = function(x,y){
+	return x + y;
+}
+undefined
+add(100,200);
+300
+var add = (x,y)=>x+y;
+
+undefined
+add(1200,444);
+1644
+var add = (x,y)=>{
+x = x - y;
+return x+y;
+}
+
+undefined
+function loop(fn){
+for(let i = 1; i<=10; i++){
+console.log(fn(i));
+//evenOdd(i); cube(i);
+}
+}
+var evenOdd = num=>num%2==0?"Even No"+num:" Odd No "+num;
+var cube = num=>num**3;
+loop(evenOdd);
+loop(cube);
+loop(num=>num**num);
+VM3285:3  Odd No 1
+VM3285:3 Even No2
+VM3285:3  Odd No 3
+VM3285:3 Even No4
+VM3285:3  Odd No 5
+VM3285:3 Even No6
+VM3285:3  Odd No 7
+VM3285:3 Even No8
+VM3285:3  Odd No 9
+VM3285:3 Even No10
+VM3285:3 1
+VM3285:3 8
+VM3285:3 27
+VM3285:3 64
+VM3285:3 125
+VM3285:3 216
+VM3285:3 343
+VM3285:3 512
+VM3285:3 729
+VM3285:3 1000
+VM3285:3 1
+VM3285:3 4
+VM3285:3 27
+VM3285:3 256
+VM3285:3 3125
+VM3285:3 46656
+VM3285:3 823543
+VM3285:3 16777216
+VM3285:3 387420489
+VM3285:3 10000000000
+undefined
+var arr = [1,2,34,5,6,7,7,8]; 
+undefined
+for(let i = 0 ; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM3473:2 1
+VM3473:2 2
+VM3473:2 34
+VM3473:2 5
+VM3473:2 6
+VM3473:2 7
+VM3473:2 7
+VM3473:2 8
+undefined
+for(let i of arr){
+console.log(i);
+}
+VM3498:2 1
+VM3498:2 2
+VM3498:2 34
+VM3498:2 5
+VM3498:2 6
+VM3498:2 7
+VM3498:2 7
+VM3498:2 8
+undefined
+function myPrint(x){
+console.log("X is ",x);
+}
+arr.forEach(myPrint);
+VM3619:2 X is  1
+VM3619:2 X is  2
+VM3619:2 X is  34
+VM3619:2 X is  5
+VM3619:2 X is  6
+VM3619:2 X is  7
+VM3619:2 X is  7
+VM3619:2 X is  8
+undefined
+arr.forEach(y=>console.log('Y is ',y));
+VM3712:1 Y is  1
+VM3712:1 Y is  2
+VM3712:1 Y is  34
+VM3712:1 Y is  5
+VM3712:1 Y is  6
+VM3712:1 Y is  7
+VM3712:1 Y is  7
+VM3712:1 Y is  8
+undefined

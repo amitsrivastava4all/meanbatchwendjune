@@ -1,0 +1,253 @@
+var arr = [10,20,9,11,22,2];
+undefined
+var arr2 = ["Hello",10,true, [10,20],["amit","ram",true]];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+arr;
+(6) [10, 20, 9, 11, 22, 2]
+arr.push(4444);
+7
+arr;
+(7) [10, 20, 9, 11, 22, 2, 4444]
+arr.pop();
+4444
+arr;
+(6) [10, 20, 9, 11, 22, 2]
+arr.splice(1);
+(5) [20, 9, 11, 22, 2]
+arr;
+[10]
+var arr = [10,20,9,11,22,2];
+undefined
+arr.splice(1,1);
+[20]
+arr;
+(5) [10, 9, 11, 22, 2]
+arr.splice(1,2);
+(2) [9, 11]
+arr;
+(3) [10, 22, 2]
+var arr = [10,20,9,11,22,2];
+undefined
+arr.splice(0);
+(6) [10, 20, 9, 11, 22, 2]
+arr;
+[]
+var arr = [10,20,9,11,22,2];
+undefined
+arr=[];
+[]
+var arr = [10,20,9,11,22,2];
+undefined
+arr.length=0;
+0
+arr;
+[]
+var arr = [10,20,9,11,22,2];
+undefined
+arr.length=3
+3
+arr;
+(3) [10, 20, 9]
+arr;
+(3) [10, 20, 9]
+var arr = [10,20,9,11,22,2];
+undefined
+for(let i = 0 ; i<arr.length; i++){
+console.log('Element is ',arr[i]);
+}
+VM1370:2 Element is  10
+VM1370:2 Element is  20
+VM1370:2 Element is  9
+VM1370:2 Element is  11
+VM1370:2 Element is  22
+VM1370:2 Element is  2
+undefined
+for(let ele of arr){
+console.log('Element is ',ele);
+}
+VM1463:2 Element is  10
+VM1463:2 Element is  20
+VM1463:2 Element is  9
+VM1463:2 Element is  11
+VM1463:2 Element is  22
+VM1463:2 Element is  2
+undefined
+var arr = ['','','',''];
+undefined
+arr.length;
+4
+var arr = [null, null, null];
+undefined
+arr.length;
+3
+arr = [];
+[]
+arr.length
+0
+var obj = null;
+undefined
+typeof obj;
+"object"
+var a = '';
+undefined
+typeof a;
+"string"
+arr;
+[]
+var arr = [10,20,9,11,22,2];
+undefined
+arr.forEach(ele=>console.log('Ele is ',ele));
+VM1992:1 Ele is  10
+VM1992:1 Ele is  20
+VM1992:1 Ele is  9
+VM1992:1 Ele is  11
+VM1992:1 Ele is  22
+VM1992:1 Ele is  2
+undefined
+arr.forEach((ele,index)=>console.log('Ele is ',ele, 'Index is ',index));
+VM2043:1 Ele is  10 Index is  0
+VM2043:1 Ele is  20 Index is  1
+VM2043:1 Ele is  9 Index is  2
+VM2043:1 Ele is  11 Index is  3
+VM2043:1 Ele is  22 Index is  4
+VM2043:1 Ele is  2 Index is  5
+undefined
+arr.forEach((ele,index)=>console.log('Ele is ',ele, 'Index is ',index));
+VM2310:1 Ele is  10 Index is  0
+VM2310:1 Ele is  20 Index is  1
+VM2310:1 Ele is  9 Index is  2
+VM2310:1 Ele is  11 Index is  3
+VM2310:1 Ele is  22 Index is  4
+VM2310:1 Ele is  2 Index is  5
+undefined
+arr.forEach((ele,i,a)=>console.log('Ele is ',ele, 'Index is ',i,'A ',a));
+VM2345:1 Ele is  10 Index is  0 A  (6) [10, 20, 9, 11, 22, 2]
+VM2345:1 Ele is  20 Index is  1 A  (6) [10, 20, 9, 11, 22, 2]
+VM2345:1 Ele is  9 Index is  2 A  (6) [10, 20, 9, 11, 22, 2]
+VM2345:1 Ele is  11 Index is  3 A  (6) [10, 20, 9, 11, 22, 2]
+VM2345:1 Ele is  22 Index is  4 A  (6) [10, 20, 9, 11, 22, 2]
+VM2345:1 Ele is  2 Index is  5 A  (6) [10, 20, 9, 11, 22, 2]
+undefined
+arr;
+(6) [10, 20, 9, 11, 22, 2]
+arr.find(ele=>ele==20);
+20
+arr.find(ele=>ele==200000);
+undefined
+arr.findIndex(ele=>ele==200000);
+-1
+arr.findIndex(ele=>ele==20);
+1
+arr;
+(6) [10, 20, 9, 11, 22, 2]
+arr.splice(arr.findIndex(ele=>ele==20),1);
+[20]
+arr;
+(5) [10, 9, 11, 22, 2]
+arr.splice(arr.findIndex(ele=>ele==200000),1);
+[2]
+var index  = arr.findIndex(ele=>ele==200000);
+
+index>=0?arr.splice(index,1):"No Record Found";
+"No Record Found"
+var index  = arr.findIndex(ele=>ele==11);
+
+index>=0?arr.splice(index,1):"No Record Found";
+[11]
+arr;
+(3) [10, 9, 22]
+arr= [1,2,10,20,9,10,11,10];
+(8) [1, 2, 10, 20, 9, 10, 11, 10]
+var t = arr.filter(ele=>ele==10);
+undefined
+t;
+(3) [10, 10, 10]
+arr.filter(ele=>ele==10).forEach(ele=>console.log('Ele is ',ele));
+VM3075:1 Ele is  10
+VM3075:1 Ele is  10
+VM3075:1 Ele is  10
+undefined
+var a = 10;
+undefined
+var b = "10":
+VM3145:1 Uncaught SyntaxError: Unexpected token :
+var b = "10";
+undefined
+typeof a;
+"number"
+typeof b;
+"string"
+a==b;
+true
+a===b;
+false
+arr.filter(ele=>ele===10).forEach(ele=>console.log('Ele is ',ele));
+VM3268:1 Ele is  10
+VM3268:1 Ele is  10
+VM3268:1 Ele is  10
+undefined
+arr.filter(ele=>ele===10).forEach((ele,index)=>console.log('Ele is ',ele,'INdex is ',index));
+VM3313:1 Ele is  10 INdex is  0
+VM3313:1 Ele is  10 INdex is  1
+VM3313:1 Ele is  10 INdex is  2
+undefined
+arr = arr.filter(ele=>ele!=10);
+(5) [1, 2, 20, 9, 11]
+arr;
+(5) [1, 2, 20, 9, 11]
+arr;
+(5) [1, 2, 20, 9, 11]
+var arr2 = arr;
+undefined
+arr2;
+(5) [1, 2, 20, 9, 11]
+arr;
+(5) [1, 2, 20, 9, 11]
+arr2[0]=100000;
+100000
+arr2;
+(5) [100000, 2, 20, 9, 11]
+arr;
+(5) [100000, 2, 20, 9, 11]
+var m = arr.filter(num=>true);
+undefined
+m;
+(5) [100000, 2, 20, 9, 11]
+arr;
+(5) [100000, 2, 20, 9, 11]
+m[0] = 2222;
+2222
+m;
+(5) [2222, 2, 20, 9, 11]
+arr;
+(5) [100000, 2, 20, 9, 11]
+var mm = [10,20,30,40,50];
+undefined
+var nn = [999,100,2000,4545,666];
+undefined
+var ttt = [...mm,...nn]
+undefined
+ttt;
+(10) [10, 20, 30, 40, 50, 999, 100, 2000, 4545, 666]
+var t1 = [mm,nn];
+undefined
+t1;
+(2) [Array(5), Array(5)]0: (5) [10, 20, 30, 40, 50]1: (5) [999, 100, 2000, 4545, 666]length: 2__proto__: Array(0)
+mm;
+(5) [10, 20, 30, 40, 50]
+var v = [...mm];
+undefined
+v;
+(5) [10, 20, 30, 40, 50]
+v[0]=99099;
+99099
+v;
+(5) [99099, 20, 30, 40, 50]
+mm;
+(5) [10, 20, 30, 40, 50]

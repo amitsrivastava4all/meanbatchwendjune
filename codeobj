@@ -1,0 +1,152 @@
+var arr = [10,20,30,1,10,20,10];
+undefined
+var seats = [[0,0,0,0,0,0,0,0,0],[0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0],[0,0]];
+undefined
+seats[0][5] = 1;
+1
+seats;
+(4) [Array(9), Array(4), Array(11), Array(2)]0: (9) [0, 0, 0, 0, 0, 1, 0, 0, 0]1: (4) [0, 0, 0, 0]2: (11) [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]3: (2) [0, 0]length: 4__proto__: Array(0)
+var temp = [30,32,34,36,18,11,10,12];
+undefined
+var temp = {'delhi':30,'mumbai':32};
+undefined
+temp.delhi;
+30
+temp['delhi'];
+30
+var seats = {"gold":[0,0,0,0,0,0,0,0,0],"silver":[[0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0]],"plat":[0,0]};
+undefined
+seats['gold'][1]=1;
+1
+seats['gold'];
+(9) [0, 1, 0, 0, 0, 0, 0, 0, 0]
+seats['silver'][0][2]=1;
+1
+seats['silver'][0];
+(4) [0, 0, 1, 0]
+temp['delhi'];
+30
+temp;
+{delhi: 30, mumbai: 32}
+var dhoni = {2011:[10,50,100,11,50],2012:[100,100,10,20]};
+undefined
+dhoni.2012
+VM1389:1 Uncaught SyntaxError: Unexpected number
+dhoni[2012];
+(4) [100, 100, 10, 20]
+typeof dhoni;
+"object"
+var dhoni  = {2011:{"wicketkeeper",{"st":1000,"ca":900,"mi":10}}};
+VM1563:1 Uncaught SyntaxError: Unexpected token ,
+var dhoni  = {2011:{"wicketkeeper":{"st":1000,"ca":900,"mi":10}}};
+undefined
+dhoni[2011]['wicketkeeper']['st'];
+1000
+typeof dhoni;
+"object"
+arr;
+(7) [10, 20, 30, 1, 10, 20, 10]
+typeof arr;
+"object"
+arr instanceof Array;
+true
+dhoni instanceof Array;
+false
+arr instanceof Object;
+true
+dhoni instanceof Object;
+true
+dhoni;
+{2011: {…}}2011: wicketkeeper: {st: 1000, ca: 900, mi: 10}__proto__: Object__proto__: Object
+delete dhoni[2011].wicketkeeper.mi
+true
+dhoni;
+{2011: {…}}2011: wicketkeeper: ca: 900st: 1000__proto__: Object__proto__: Object__proto__: Object
+function createMobileObject(id , name, ,price){
+var obj  = {}; // create empty object
+obj.id = id; //assign value in object
+obj.name = name;
+obj.price = price;
+return obj;
+}
+VM2328:1 Uncaught SyntaxError: Unexpected token ,
+function createMobileObject(id , name, price){
+var obj  = {}; // create empty object
+obj.id = id; //assign value in object
+obj.name = name;
+obj.price = price;
+return obj;
+}
+undefined
+var apple = createMobileObject(1001,"Apple",9999);
+undefined
+apple;
+{id: 1001, name: "Apple", price: 9999}
+var samsung = createMobileObject(1002,"Samsung",5555);
+undefined
+function createCricketerObject(rating , fullName, strikeRate){
+var obj  = {}; // create empty object
+obj.rating = rating; //assign value in object
+obj.fullName = fullName;
+obj.strikeRate = price;
+return obj;
+}
+undefined
+function Mobile(id , name, price){
+//var this  = {}; // Implicit
+this.id = id; //assign value in object
+this.name = name;
+this.price = price;
+//return obj; // Implicit
+}
+undefined
+var apple = new Mobile(1001, "Apple",9999);
+undefined
+typeof apple;
+"object"
+apple instanceof Mobile;
+true
+apple instanceof Object;
+true
+function Mobile(id , name, price){
+//var this  = {}; // Implicit
+this.id = id; //assign value in object
+this.name = name;
+this.price = price;
+//return obj; // Implicit
+}
+undefined
+function createMobileObject(id , name, price){
+var obj  = {}; // create empty object
+obj.id = id; //assign value in object
+obj.name = name;
+obj.price = price;
+return obj;
+}
+undefined
+typeof arr;
+"object"
+arr;
+(7) [10, 20, 30, 1, 10, 20, 10]
+arr instanceof Array;
+true
+typeof Array;
+"function"
+obj;
+VM3084:1 Uncaught ReferenceError: obj is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3084:1
+dhoni;
+{2011: {…}}
+dhoni instanceof Object;
+true
+typeof Object;
+"function"
+class A{
+}|
+VM3200:2 Uncaught SyntaxError: Unexpected token |
+class A{
+}
+undefined
+typeof A;
+"function"

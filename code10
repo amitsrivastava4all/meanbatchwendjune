@@ -1,0 +1,164 @@
+function Customer(id, name, balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+}
+undefined
+var ram = new Customer(1001, "Ram",9999);
+undefined
+ram;
+Customer {id: 1001, name: "Ram", balance: 9999}
+var shyam = new Customer(1002, "Shyam",5555);
+undefined
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 5555}
+ram;
+Customer {id: 1001, name: "Ram", balance: 9999}
+ram.id;
+1001
+shyam.id;
+1002
+function Customer(id, name, balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+this.print=function(){
+console.log("Id "+this.id +" Name "+this.name+
+" Balance "+this.balance);
+}
+}
+undefined
+var tom = new Customer(11,"Tom",8888);
+undefined
+tom;
+Customer {id: 11, name: "Tom", balance: 8888, print: ƒ}
+var tim = new Customer(12,"Tim",9888);
+undefined
+tim;
+Customer {id: 12, name: "Tim", balance: 9888, print: ƒ}
+tim.print();
+VM909:6 Id 12 Name Tim Balance 9888
+undefined
+tom.print();
+VM909:6 Id 11 Name Tom Balance 8888
+undefined
+function Customer(id, name, balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+
+}
+undefined
+typeof Customer;
+"function"
+var obj = {};
+undefined
+typeof obj;
+"object"
+obj instanceof Object;
+true
+typeof Object;
+"function"
+var arr = [10,20];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+function show(){
+console.log("I am Show ");
+}
+undefined
+typeof show;
+"function"
+show();
+VM1539:2 I am Show 
+undefined
+var obj = new show();
+VM1539:2 I am Show 
+undefined
+obj;
+show {}
+var tom = new Customer(11,"Tom",8888);
+undefined
+tom;
+Customer {id: 11, name: "Tom", balance: 8888}
+show;
+ƒ show(){
+console.log("I am Show ");
+}
+console.dir(show);
+VM1754:1 ƒ show()arguments: nullcaller: nulllength: 0name: "show"prototype: {constructor: ƒ}constructor: ƒ show()__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()arguments: (...)caller: (...)length: 1name: "Function"prototype: ƒ ()__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[Scopes]]: Scopes[0]length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM1539:1[[Scopes]]: Scopes[1]
+undefined
+function Customer(id, name, balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+
+}
+Customer.prototype.print=function(){
+console.log('Id is '+this.id+' Name is '+this.name +' Balance is '+this.balance); 
+}
+ƒ (){
+console.log('Id is '+this.id+' Name is '+this.name +' Balance is '+this.balance); 
+}
+var mike = new Customer(1001, "Mike",8888);
+undefined
+mike;
+Customer {id: 1001, name: "Mike", balance: 8888}
+var tom = new Customer(1002, "Tom",18888);
+undefined
+tom;
+Customer {id: 1002, name: "Tom", balance: 18888}balance: 18888id: 1002name: "Tom"__proto__: Objectprint: ƒ ()constructor: ƒ Customer(id, name, balance)__proto__: Object
+tom.id;
+1002
+tom.print();
+VM2088:8 Id is 1002 Name is Tom Balance is 18888
+undefined
+tom;
+Customer {id: 1002, name: "Tom", balance: 18888}balance: 18888id: 1002name: "Tom"__proto__: print: ƒ ()constructor: ƒ Customer(id, name, balance)__proto__: Object
+class Emp{
+constructor(id, name, salary){
+this.id = id;
+this.name= name;
+this.salary = salary;
+}
+print(){
+console.log('Id '+this.id +' Name '+this.name);
+}
+}
+undefined
+typeof Emp;
+"function"
+var ram = new Emp(1001, "Ram",9999);
+undefined
+ram.print();
+VM2609:8 Id 1001 Name Ram
+undefined
+Emp.prototype.printSalary = function(){
+console.log("Salary is ",this.salary);
+}
+ƒ (){
+console.log("Salary is ",this.salary);
+}
+ram.printSalary();
+VM2912:2 Salary is  9999
+undefined
+console.dir(Emp);
+VM2990:1 class Emparguments: (...)caller: (...)length: 3name: "Emp"prototype: printSalary: ƒ ()constructor: class Empprint: ƒ print()__proto__: Object__proto__: ƒ ()[[FunctionLocation]]: VM2609:2[[Scopes]]: Scopes[2]
+undefined
+console.dir(Customer);
+VM3064:1 ƒ Customer(id, name, balance)arguments: nullcaller: nulllength: 3name: "Customer"prototype: print: ƒ ()constructor: ƒ Customer(id, name, balance)__proto__: Object__proto__: ƒ ()[[FunctionLocation]]: VM2088:1[[Scopes]]: Scopes[2]
+undefined
+var a = {};
+undefined
+a= 1000;
+1000
+const b = {};
+undefined
+b= 1000;
+VM3190:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:2
+(anonymous) @ VM3190:1

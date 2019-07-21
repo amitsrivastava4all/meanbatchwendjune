@@ -5,5 +5,9 @@ class Product{
         this.price = price;
         this.url = url;
         this.desc = desc;
+        this.isAdded = false;
+    }
+    toggle(){
+        this.isAdded = !this.isAdded;
     }
 }

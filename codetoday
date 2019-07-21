@@ -1,0 +1,59 @@
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+},3000);
+console.log("Ends ");
+VM257:1 Start 
+VM257:5 Ends 
+undefined
+VM257:3 Call After 3 Sec 
+function show(){
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+},3000);
+console.log("Ends ");
+}
+undefined
+show();
+VM294:2 Start 
+VM294:6 Ends 
+undefined
+VM294:4 Call After 3 Sec 
+function show(){
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+return 1000;
+},3000);
+console.log("Ends ");
+
+}
+undefined
+var t = show();
+VM349:2 Start 
+VM349:7 Ends 
+undefined
+t;
+undefined
+VM349:4 Call After 3 Sec 
+function getReturn(result){
+console.log("Result is ",result);
+}
+undefined
+show(getReturn);
+function show(fn){
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+fn(1000);
+//return 1000;
+},3000);
+console.log("Ends ");
+
+}
+VM772:3 Start 
+VM772:9 Ends 
+undefined
+VM772:5 Call After 3 Sec 
+VM690:2 Result is  1000

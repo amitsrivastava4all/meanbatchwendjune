@@ -1,0 +1,184 @@
+function show(){
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+return 1000;
+},3000);
+console.log("Ends ");
+
+}
+var m = show();
+console.log("M is ",m);
+VM177:2 Start 
+VM177:7 Ends 
+VM177:11 M is  undefined
+undefined
+VM177:4 Call After 3 Sec 
+function callBack(val){
+console.log("Call Back Get the Value ",val);
+}
+undefined
+function show(fn){
+console.log("Start ");
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+fn(1000);
+//return 1000;
+},3000);
+console.log("Ends ");
+
+}
+var m = show(callBack);
+console.log("M is ",m);
+VM544:2 Start 
+VM544:8 Ends 
+VM544:12 M is  undefined
+undefined
+VM544:4 Call After 3 Sec 
+VM484:2 Call Back Get the Value  1000
+
+function show(){
+console.log("Start ");
+var pr= new Promise((resolve, reject)=>{
+setTimeout(function(){
+console.log("Call After 3 Sec ");
+resolve(1000);
+
+},7000);
+})
+
+console.log("Ends ");
+return pr;
+
+}
+var promise = show();
+console.log("Promise is ",promise);
+
+VM974:3 Start 
+VM974:12 Ends 
+VM974:17 Promise is  Promise {<pending>}
+undefined
+VM974:6 Call After 3 Sec 
+
+function show(){
+console.log("Start ");
+var pr= new Promise((resolve, reject)=>{
+setTimeout(function(){
+console.log("Call After 7 Sec ");
+resolve(1000);
+
+},7000);
+})
+
+console.log("Ends ");
+return pr;
+
+}
+var promise = show();
+console.log("Promise is ",promise);
+promise.then(data=>console.log("Data is ",data)).catch(err=>console.log("Error is ",err));
+
+VM1152:3 Start 
+VM1152:12 Ends 
+VM1152:17 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1152:6 Call After 7 Sec 
+VM1152:18 Data is  1000
+
+function show(){
+console.log("Start ");
+var pr= new Promise((resolve, reject)=>{
+setTimeout(function(){
+console.log("Call After 7 Sec ");
+if(10>20){
+resolve(1000);
+}
+else{
+reject("Some Error in Promise ");
+}
+
+},7000);
+})
+
+console.log("Ends ");
+return pr;
+
+}
+var promise = show();
+console.log("Promise is ",promise);
+promise.then(data=>console.log("Data is ",data)).catch(err=>console.log("Error is ",err));
+
+VM1226:3 Start 
+VM1226:17 Ends 
+VM1226:22 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1226:6 Call After 7 Sec 
+VM1226:23 Error is  Some Error in Promise 
+function cube(num){
+var pr = new Promise((resolve, reject)=>{
+setTimeout(function(){
+resolve(num**3);
+},7000);
+});
+return pr;
+}
+undefined
+Promise.all([cube(3), cube(5), cube(2)]).then(result=>console.log("Result ",result)).catch(err=>console.log("Err is ",err));
+
+Promise {<pending>}
+VM1770:1 Result  (3) [27, 125, 8]
+function cube(num){
+console.log("Cube Call ",num);
+var pr = new Promise((resolve, reject)=>{
+setTimeout(function(){
+resolve(num**3);
+},7000);
+});
+return pr;
+}
+undefined
+Promise.all([cube(3), cube(5), cube(2)]).then(result=>console.log("Result ",result)).catch(err=>console.log("Err is ",err));
+
+VM1822:2 Cube Call  3
+VM1822:2 Cube Call  5
+VM1822:2 Cube Call  2
+Promise {<pending>}__proto__: Promisecatch: ƒ catch()constructor: ƒ Promise()finally: ƒ finally()then: ƒ then()Symbol(Symbol.toStringTag): "Promise"__proto__: Object[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM1826:1 Result  (3) [27, 125, 8]
+Promise.all([cube(3), cube(5), cube(2)]).then(result=>console.log("Result ",result)).catch(err=>console.log("Err is ",err)).finally(()=>console.log("I Always Execute "));
+
+VM1822:2 Cube Call  3
+VM1822:2 Cube Call  5
+VM1822:2 Cube Call  2
+Promise {<pending>}
+VM1899:1 Result  (3) [27, 125, 8]
+VM1899:1 I Always Execute 
+async function cube(num){
+console.log("Cube Call ",num);
+var pr = new Promise((resolve, reject)=>{
+setTimeout(function(){
+resolve(num**3);
+},7000);
+});
+return pr;
+}
+undefined
+async function disp(){
+return 1000;
+}
+undefined
+var t = disp();
+undefined
+t;
+Promise {<resolved>: 1000}
+async function total(){
+var m = await cube(3) ;
+var r = await cube(m);
+var t = await cube(r);
+return  t;
+}
+ total().then(data=>console.log('Data is ',data)).catch(e=>console.log('E is ',e));
+VM1915:2 Cube Call  3
+Promise {<pending>}
+VM1915:2 Cube Call  27
+VM1915:2 Cube Call  19683
+VM2427:7 Data is  7625597484987

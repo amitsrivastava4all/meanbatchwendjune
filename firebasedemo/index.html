@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="js/config.js"></script>
+    <script>
+    function login(){
+        var userid = document.querySelector('#userid').value;
+        var pwd = document.querySelector('#pwd').value;
+        var userProxy = firebase.database().ref('/users/'+userid);
+        userProxy.on('value',(snapshot)=>{
+            var obj = snapshot.val();
+            if(obj.password == pwd){
+                document.querySelector('#msg').innerText ="Welcome "+userid;
+            }
+            else{
+                document.querySelector('#msg').innerText ="Invalid Userid or Password"; 
+            }
+        })
+    }
+    function register(){
+        var userid = document.querySelector('#userid').value;
+        var pwd = document.querySelector('#pwd').value;
+        var obj = {'userid':userid,'password':pwd};
+        // jsaugbatch/users/amit
+        let promise = firebase.database().ref('/users/'+userid).set(obj);
+        promise.then(data=>{
+            document.querySelector('#msg').innerText = 'Record Added';
+        }).catch(err=>{
+            document.querySelector('#msg').innerText = 'Error During Add';
+        })
+    }
+    </script>
+</head>
+<body>
+    <h2 id='msg'></h2>
+    <input id='userid' placeholder="Type Userid Here" type="text">
+    <br>
+    <input id='pwd' placeholder="Type Password Here" type="password">
+    <br>
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+</body>
+</html>

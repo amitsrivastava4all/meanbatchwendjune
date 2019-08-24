@@ -1,0 +1,11 @@
+const path = require('path');
+let fullPath = path.join(__dirname,'/pathdemo.js');
+console.log(fullPath);
+let parent = path.normalize(__dirname+'/..');
+console.log('Parent is ',parent);
+fullPath = path.join(parent,'/node-questions/first/app.js');
+console.log('Full Path is ',fullPath);
+console.log('Dir Path ',path.dirname(fullPath));
+console.log('File Name with ext ',path.basename(fullPath));
+console.log('File Name without ext ',path.basename(fullPath,'.js'));
+console.log('Only Ext ',path.extname(fullPath));
